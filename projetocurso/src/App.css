@@ -1,0 +1,28 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px; /* Adicionado padding para telas menores */
+}
+
+.app-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.app-title {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 600; /* Deixando o título mais destacado */
+}

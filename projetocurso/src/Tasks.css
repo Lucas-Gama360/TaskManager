@@ -1,0 +1,63 @@
+.tasks-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.tasks-list li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px 15px; /* Ajustado o padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  color: #555;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease; /* Adicionado transição */
+}
+
+.tasks-list li:hover {
+  background-color: #eef;
+  cursor: pointer;
+}
+
+/* Estilo para o botão do título da tarefa */
+.task-title-button {
+  background: none;
+  border: none;
+  text-align: left;
+  flex-grow: 1; /* Permite que o botão ocupe o espaço */
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Estilo para a tarefa completada */
+.task-completed .task-title-button {
+  text-decoration: line-through;
+  color: #aaa; /* Cor mais clara para indicar completado */
+}
+
+/* Estilo para o botão de ação (o '!') */
+.action-button {
+  background-color: #ff6347; /* Tomate */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #cc4c37;
+}
