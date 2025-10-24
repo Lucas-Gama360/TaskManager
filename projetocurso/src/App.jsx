@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./App.css";
+import "./App.css"; // Importa o novo CSS
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
+
 function App() {
   const [tasks, setTasks] = useState([
     {
@@ -23,20 +24,36 @@ function App() {
       isCompleted: false,
     },
   ]);
+
   function OnTaskClick(taskid) {
-  const newTasks = tasks.map((task) => {
-    if (task.id === taskid) {
-      return { ...task, isCompleted: !task.isCompleted };
+    const newTasks = tasks.map((task) => {
+      if (task.id === taskid) {
+        return { ...task, isCompleted: !task.isCompleted };
+      }
+      return task;
+    });
+    setTasks(newTasks);
+  }
+
+  function OnTaskDelete(taskid) {
+    const newTasks = tasks.filter(task => task.id !== taskid)
+    setTasks(newTasks)
+  }
+
+  function OnAddTaskSubmit (title){
+    const newTask = {
+      id: tasks.length +1,
+      title: title,
+      isCompleted: false,
     }
-    return task;
-  });
-  setTasks(newTasks);
-}
+    setTasks([...tasks, newTask])
+  }
+
   return (
-    <div className="app-container">
-      <h1 className="app-title">Gerenciador de tarefas</h1>
-      <Tasks tasks={tasks}  OnTaskClick = {OnTaskClick}/>
-      <AddTask />
+    <div>
+      <h1>Gerenciador de tarefas</h1>
+      <AddTask OnAddTaskSubmit={OnAddTaskSubmit}/>
+      <Tasks tasks={tasks} OnTaskClick={OnTaskClick} OnTaskDelete={OnTaskDelete} />
     </div>
   );
 }
