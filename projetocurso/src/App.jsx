@@ -50,8 +50,8 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Gerenciador de tarefas</h1>
+    <div className="Geral">
+      <h1 className="title">Gerenciador de tarefas</h1>
       <AddTask OnAddTaskSubmit={OnAddTaskSubmit}/>
       <Tasks tasks={tasks} OnTaskClick={OnTaskClick} OnTaskDelete={OnTaskDelete} />
     </div>

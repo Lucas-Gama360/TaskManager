@@ -1,0 +1,23 @@
+body, #root {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;    /* centraliza verticalmente */
+  height: 100vh;          /* ocupa a tela toda */
+  margin: 0;              /* remove espaçamento padrão */
+  background-color: #f0f0f0; /* opcional, só pra ver melhor */
+}
+.Geral{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    padding: 10px 20px;
+}
+.title{
+    color: rgb(106, 140, 255);
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+}
